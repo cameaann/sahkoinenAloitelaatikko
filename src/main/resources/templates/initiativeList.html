@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aloiteet</title>
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+</head>
+<body>
+    <div th:class="table-container">
+        <h1>Aloiteet</h1>
+        <table>
+            <thead>
+            <tr>
+                <td>Aloite</td>
+                <td>Tekija</td>
+                <td>Sähkoposti</td>
+                <td>Päivämäärä</td>
+                <!--        <td>Laita pois</td>-->
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="initiative : ${initiatives}">
+                <td th:text="${initiative.kuvaus}"></td>
+                <td th:text="|${initiative.getTekija().etunimi} ${initiative.getTekija().sukunimi}|"></td>
+                <td th:text="|${initiative.getTekija().email}|"></td>
+                <td th:text="${#dates.format(initiative.pvm , 'dd/MM/yyyy')}"></td>
+                <!--        <td>-->
+                <!--            <form th:action="@{/list/{id}/delete(id=${link.id})}"-->
+                <!--                  th:method="delete">-->
+                <!--                <input type="submit" value="Delete"/>-->
+                <!--            </form>-->
+                <!--        </td>-->
+            </tr>
+            </tbody>
+        </table>
+        <a th:class="btn" th:href="@{/}">Takaisin</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sahkoinen Aloitelaatikko</title>
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+</head>
+<body>
+<div th:class="wrap-container">
+  <h1>Tervetuloa Sahkoinen Aloitelaatikkoon</h1>
+
+  <div  th:class="container">
+    <a th:class="btn" th:href="@{/addAuthor}">Lisää tekija</a>
+    <a th:class="btn" th:href="@{/addInitiative}">Lisää aloite</a>
+    <a th:class="btn" th:href="@{/initiativeList}">Näyttä aloiteet</a>
+  </div>
+</div>
+
+</body>
+</html>

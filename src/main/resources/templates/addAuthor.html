@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Author</title>
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+</head>
+<body>
+<div th:class="form-container">
+    <h2>Lisää uusi tekija</h2>
+    <form th:class="addForm"  th:action="@{/addAuthor}" method="POST">
+        <div th:class="formfield">
+            <label for="name"> Etunimi: </label>
+            <input type="text" name="name" id="name"/>
+        </div>
+        <div th:class="formfield">
+            <label for="lastName">Sukunimi: </label>
+            <input type="text" name="lastName" id="lastName"/>
+        </div>
+        <div th:class="formfield">
+            <label for="email">Email: </label>
+            <input type="text" name="email" id="email"/>
+        </div>
+        <input th:class="addBtn" type="submit" th:value="vahvista"/>
+    </form>
+    <a th:class="btn" th:href="@{/}">Takaisin</a>
+</div>
+
+</body>
+</html>

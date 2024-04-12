@@ -1,0 +1,128 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: Arial, "sans-serif";
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+}
+h1, h2{
+    color:darkslategray;
+    text-align: center;
+    margin-block-start: 3rem;
+}
+h1{
+    margin-block-start: 10rem;
+}
+
+.wrap-container{
+    width:70rem;
+    border:2px dotted darkslategray;
+    margin: 20rem auto;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50rem;
+    margin: 5rem auto;
+}
+
+.form-container{
+    width:60rem;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+}
+.table-container{
+    width: 80rem;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    cursor: pointer;
+    display: block;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: darkslategray;
+    background-color: azure;
+    border: 1px solid darkslategray;
+    border-radius: 2px;
+    align-self: flex-start;
+}
+
+.addBtn{
+    width:10rem;
+    justify-self: center;
+    display: block;
+    padding: 1rem;
+    background-color: lightseagreen;
+    margin-block-start: 5rem;
+    color: azure;
+    border:none;
+    border-radius: 2px;
+    font-weight: bold;
+}
+.addBtn:hover,
+.btn:hover{
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border: 1px solid darkslategray;
+    border-collapse: collapse;
+    margin-block-end: 5rem;
+}
+thead{
+    background-color: darkslategray;
+    color: azure;
+}
+td{
+    padding: 1rem;
+}
+
+td>a.link:hover{
+    cursor: pointer;
+}
+
+.addForm{
+    width:30rem;
+    display: flex;
+    flex-direction: column;
+    margin:5rem auto;
+    margin-block-end: 10rem;
+    align-items: center;
+}
+.formfield{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 2rem;
+}
+
+
+.formfield>input[type=text], input[type=date]{
+    flex-basis: 70%;
+    height:2rem;
+}
+.formfield>select{
+    width: 72%;
+    height: 2.4rem;
+}
+.formfield>textarea{
+    width:70%;
+    height:5rem;
+
+}
+.formfield > .textarea-label{
+    align-items: flex-start;
+}
+@media only screen and (max-width: 60rem) {
+    width: 50rem;
+}

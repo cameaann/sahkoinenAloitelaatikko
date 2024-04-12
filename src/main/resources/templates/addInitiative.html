@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lisää aloite</title>
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<div th:class="form-container">
+    <h2>Lisää uusi aloite</h2>
+    <form th:class="addForm" th:action="@{/addInitiative}" method="POST">
+        <div th:class="formfield">
+            <label th:class="textarea-label" for="description"> Kuvaus: </label>
+            <textarea type="text" name="description" id="description"></textarea>
+        </div>
+        <div th:class="formfield">
+            <label for="date">Pvm </label>
+            <input type="date" name="pvm" id="date"/>
+        </div>
+        <div th:class="formfield">
+            <label for="tekija">Tekija</label>
+            <select name="id" id="tekija">
+                <option th:each="tekija : ${tekijat}" th:value="${tekija.id}"
+                        th:text="${tekija.etunimi}"></option>
+            </select>
+        </div>
+        <input th:class="addBtn" type="submit" th:value="vahvista"/>
+    </form>
+    <a th:class="btn" th:href="@{/}">Takaisin</a>
+</div>
+
+</body>
+</html>
